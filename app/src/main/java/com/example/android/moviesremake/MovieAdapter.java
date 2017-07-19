@@ -121,10 +121,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ForecastAdap
      * created one. This is handy when we get new data from the web but don't want to create a
      * new ForecastAdapter to display it.
      *
-     * @param weatherData The new weather data to be displayed.
+     * @param data The new weather data to be displayed.
      */
-    public void setMoviesData(ArrayList<Movie> weatherData) {
-        moviesData = weatherData;
+    public void setMoviesData(ArrayList<Movie> data) {
+        moviesData = data;
         notifyDataSetChanged();
     }
 }
