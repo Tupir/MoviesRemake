@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements MovieAdapter.ForecastAdapterOnClickHandler {
 
     private MovieAdapter mAdapter;
-    private RecyclerView mNumbersList;
+    private RecyclerView recycler;
     private ProgressBar mLoadingIndicator;
 
 
@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Fore
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);  // loader
 
         // nastavenie recyclerview
-        mNumbersList = (RecyclerView) findViewById(R.id.rv_numbers);
+        recycler = (RecyclerView) findViewById(R.id.rv_numbers);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
-        mNumbersList.setLayoutManager(layoutManager);
-        mNumbersList.setHasFixedSize(true);
+        recycler.setLayoutManager(layoutManager);
+        recycler.setHasFixedSize(true);
 
         // vyplnit recyclerview datami
         mAdapter = new MovieAdapter(getBaseContext(), this);
-        mNumbersList.setAdapter(mAdapter);
+        recycler.setAdapter(mAdapter);
 
         new FetchMovieTask().execute();
     }

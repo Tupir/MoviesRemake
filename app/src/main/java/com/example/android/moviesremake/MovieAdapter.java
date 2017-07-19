@@ -33,7 +33,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ForecastAdap
 
     public MovieAdapter(Context context, ForecastAdapterOnClickHandler clickHandler) {
         this.context = context;         // for Picasso
-        mClickHandler = clickHandler;   // for CLICKING
+        mClickHandler = clickHandler;   // for Clicking
     }
 
     /**
