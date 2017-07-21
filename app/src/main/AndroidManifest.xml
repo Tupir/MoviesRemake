@@ -21,8 +21,8 @@
         </activity>
         <activity
             android:name=".DetailActivity"
-            android:parentActivityName="com.example.android.moviesremake.MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
